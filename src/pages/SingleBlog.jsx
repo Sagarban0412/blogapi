@@ -20,14 +20,14 @@ const SingleBlog = () => {
   return (
     <>
       {load ? (
-       <div><img src={'https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif'}/></div>
+       <div className="flex items-center justify-center h-screen"><img src={'https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif'}/></div>
       ) : (
-        <div>
+        <div className="flex flex-col items-center justify-center w-screen bg-red-100 w-90">
           <h1 className="text-red-500">{data.id}</h1>
           <img src={data.avatar} style={{ width: "200px", height: "200px" }} />
 
           <h3>{data.name}</h3>
-          <p>{data.desc}...</p>
+          <p className=" w-fit">{data.desc}...</p>
         </div>
       )}
     </>
